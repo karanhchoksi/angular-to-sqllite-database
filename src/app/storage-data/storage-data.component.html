@@ -1,3 +1,31 @@
-<p>
-  storage-data works!
-</p>
+<div class="row container">
+  <div class="col-sm-6">
+
+    <button type="button" (click)="setDataInSqlStorage()"> set Data</button>
+
+    <button class="m-l-10" type="button" (click)="getDatafromSqlStorage()"> Get Data</button> <br>
+
+    <button class="m-t-10" type="button" (click)="setArrayData()"> Set Array Data</button>
+
+    <button class="m-l-10" type="button" (click)="getArrayData()"> Get Array Data</button> <br>
+
+
+    <button class="m-t-10" type="button" (click)="removeKey()"> Remove</button><br>
+
+    <button class="m-t-10" type="button" (click)="getkeys()"> Get Keys</button><br>
+
+    <button class="m-t-10" type="button" (click)="getStorageSize()"> Get Storage Size</button>
+
+  </div>
+  <div class="col-sm-6">
+    <div *ngIf="userData">
+      <h4>Storage Data Json</h4>
+      <pre>{{userData | json}}</pre>
+    </div>
+
+  </div>
+</div>
+
+
+
+
